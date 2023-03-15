@@ -11,9 +11,18 @@ function numeroSimetrico(num) {
   // Un número es simétrico cuando es igual a su reverso.
   // Ej:
   // numeroSimetrico(11711) devuelve true
+  var numerostring = num.toString();
+  var mitad = numerostring.length;
+  //MI ERROR ACA ERA QUE EL .LENTGH NO CORRE PARA LOS NUMEROS, SOLO PARA LOS STRINGS.
 
   // Tu código:
-
+  for(i = 0; i < Math.floor(mitad / 2); i++) //math.floor para aproximarlo hacia abajo
+{
+  if(numerostring[i] !== numerostring[mitad -i-1]){
+  return false;
+  }
+}
+return true;
 }
 
 // No modifiques nada debajo de esta linea //
